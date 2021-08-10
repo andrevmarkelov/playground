@@ -6,7 +6,10 @@ import {
     Redirect,
 } from 'react-router-dom';
 
-import {Dashboard, Profile} from './features';
+import {
+    Dashboard,
+    Profile,
+} from './features';
 
 function App () {
     return (

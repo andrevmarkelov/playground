@@ -1,4 +1,8 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import {
+    configureStore,
+    ThunkAction,
+    Action,
+} from '@reduxjs/toolkit';
 import dashboard from './Dashboard';
 
 export const store = configureStore({
@@ -9,9 +13,7 @@ export const store = configureStore({
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
-export type AppThunk<ReturnType = void> = ThunkAction<
-    ReturnType,
+export type AppThunk<ReturnType = void> = ThunkAction<ReturnType,
     RootState,
     unknown,
-    Action<string>
-    >;
+    Action<string>>;

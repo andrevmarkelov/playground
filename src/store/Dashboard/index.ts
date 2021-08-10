@@ -1,6 +1,9 @@
-import {createSlice, ThunkAction} from '@reduxjs/toolkit';
+import {
+    createSlice,
+    ThunkAction,
+} from '@reduxjs/toolkit';
 
-import { RootState } from '..'
+import {RootState} from '..';
 import initialState, * as handlers from './handlers';
 
 export const {actions, reducer} = createSlice({
@@ -13,16 +16,13 @@ export const {actions, reducer} = createSlice({
     },
 });
 
-export function fetchCount(length = 1) {
-    return new Promise<string[]>((resolve) =>
-        setTimeout(() => resolve(
-            Array.from({ length }).map(() => Math.random().toString(16).slice(2) )
-        ), 500)
-    );
+export function fetchCount (length = 1) {
+    return new Promise<string[]>((resolve) => setTimeout(() => resolve(
+        Array.from({length}).map(() => Math.random().toString(16).slice(2)),
+    ), 500));
 }
 
-
-export const getData = (count: number): ThunkAction<void, RootState, any, any> => async dispatch => {
+export const getData = (count: number): ThunkAction<void, RootState, any, any> => async (dispatch) => {
     dispatch(actions.request());
     try {
         const data = await fetchCount(count);

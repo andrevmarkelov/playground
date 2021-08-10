@@ -1,0 +1,202 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks"
+  ],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard",
+    "eslint:recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "ignorePatterns": ["serviceWorker.ts"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "no-use-before-define": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "ignoreRestSiblings": true
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": [
+      "warn",
+      {
+        "functions": false,
+        "classes": false,
+        "variables": false,
+        "typedefs": false
+      }
+    ],
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/display-name": "off",
+    "react/prop-types": "off",
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelfClosing": "never",
+        "beforeClosing": "never"
+      }
+    ],
+    "react/jsx-closing-tag-location": "error",
+    "react/jsx-curly-spacing": [
+      "error",
+      {
+        "when": "never",
+        "children": true
+      }
+    ],
+    "react/jsx-wrap-multilines": "error",
+    "react/self-closing-comp": "error",
+    "react/jsx-closing-bracket-location": [
+      "error",
+      "line-aligned"
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 140,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-async-promise-executor": "off",
+    "no-console": "warn",
+    "no-shadow": "off",
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "object-shorthand": [
+      "warn",
+      "always"
+    ],
+    "prefer-object-spread": "error",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true,
+        "avoidEscape": true
+      }
+    ],
+    "prefer-template": "warn",
+    "prefer-rest-params": "error",
+    "prefer-arrow-callback": "error",
+    "arrow-parens": "error",
+    "implicit-arrow-linebreak": "error",
+    "no-duplicate-imports": "error",
+    "one-var": [
+      "error",
+      "never"
+    ],
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
+    "no-unneeded-ternary": "error",
+    "curly": [
+      "error",
+      "all"
+    ],
+    "brace-style": "error",
+    "no-else-return": "error",
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "exceptions": [
+          "-",
+          "+",
+          "*"
+        ]
+      }
+    ],
+    "space-before-blocks": "error",
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true
+      }
+    ],
+    "space-infix-ops": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "space-in-parens": [
+      "error",
+      "never"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "never"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "never"
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "func-call-spacing": [
+      "error",
+      "never"
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ImportDeclaration": {
+          "multiline": true,
+          "minProperties": 2
+        }
+      }
+    ]
+  }
+}
