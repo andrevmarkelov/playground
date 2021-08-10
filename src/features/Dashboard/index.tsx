@@ -5,6 +5,7 @@ import {
     useAppDispatch,
     useAppSelector,
 } from '../../app/hooks';
+import {Table} from '../../components/table/table';
 
 export const Dashboard: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -18,6 +19,7 @@ export const Dashboard: React.FC = () => {
 
     return (
         <div>
+            <Table/>
             <h1>Dashboard <button onClick={increase}>Increase</button></h1>
             <ul>
                 {items.map((name) => (
