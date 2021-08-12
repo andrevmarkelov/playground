@@ -1,6 +1,6 @@
 import {Button} from '@material-ui/core';
 import React from 'react';
-import {useStyles} from '../SimpleComponent/styles';
+import {useStyles} from './styles';
 
 export const Table: React.FC = () => {
     const classes = useStyles();
