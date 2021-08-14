@@ -1,11 +1,35 @@
 import {Button} from '@material-ui/core';
 import React from 'react';
+import {TableItem} from '../TableItem';
 import {useStyles} from './styles';
 
 export const Table: React.FC = () => {
     const classes = useStyles();
 
-    const currDate = new Date().toLocaleDateString();
+    type ordersItemsType = {
+        id: number;
+        link: string;
+        price: string;
+        description: string;
+        date: string;
+    }
+
+    const ordersItems: ordersItemsType[] = [
+        {
+            id: 0,
+            link: 'Разработка приложения для логиста и курьеров',
+            price: '150$',
+            description: 'Необходимо создать приложение для курьеров и логиста, более подробно во вложении.',
+            date: new Date().toLocaleDateString(),
+        },
+        {
+            id: 1,
+            link: 'Создание серверной расчетной программы',
+            price: '220$',
+            description: 'В рамках реализации нового проекта компании Danfoss, стоит задача реализации сервера для проведения ряда расчетов для подбора оборудования.',
+            date: new Date().toLocaleDateString(),
+        },
+    ];
 
     return (
         <div className={classes.wrapper}>
@@ -14,32 +38,15 @@ export const Table: React.FC = () => {
                 <Button variant="contained" color="secondary">Разместить заказ</Button>
             </div>
             <div className={classes.tableBody}>
-                <div className={classes.itemTable}>
-                    <div className={classes.itemTableHeader}>
-                        <a href="/" className={classes.orderLink}>Разработка приложения для логиста и курьеров</a>
-                        <span className={classes.orderPrice}>150$</span>
-                    </div>
-                    <div className={classes.itemTableBody}>
-                        <p className={classes.orderDescription}>
-                            Необходимо создать приложение для курьеров и логиста, более подробно во вложении.
-                        </p>
-                        <p className={classes.orderDate}>{currDate}</p>
-                    </div>
-                </div>
-                {/* temporary */}
-                <div className={classes.itemTable}>
-                    <div className={classes.itemTableHeader}>
-                        <a href="/" className={classes.orderLink}>Создание серверной расчетной программы</a>
-                        <span className={classes.orderPrice}>220$</span>
-                    </div>
-                    <div className={classes.itemTableBody}>
-                        <p className={classes.orderDescription}>
-                        В рамках реализации нового проекта компании Danfoss, стоит задача реализации сервера
-                        для проведения ряда расчетов для подбора оборудования.
-                        </p>
-                        <p className={classes.orderDate}>{currDate}</p>
-                    </div>
-                </div>
+                {ordersItems.map((item) => (
+                    <TableItem
+                        key={item.id}
+                        link={item.link}
+                        price={item.price}
+                        description={item.description}
+                        date={item.date}
+                    />
+                ))}
             </div>
         </div>
     );

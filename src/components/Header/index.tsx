@@ -1,15 +1,20 @@
 import {Grid} from '@material-ui/core';
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import {useStyles} from './styles';
 
 export const Header: React.FC = () => {
     const classes = useStyles();
 
     return (
-        <Grid container justifyContent="space-between" alignItems="center" className={classes.header}>
+        <Grid container justifyContent="center" alignItems="center" className={classes.header}>
             <ul>
-                <li>Список заказов</li>
-                <li>Профиль</li>
+                <li className={classes.headerList}>
+                    <NavLink to='/dashboard' className={classes.headerLink}>Список заказов</NavLink>
+                </li>
+                <li className={classes.headerList}>
+                    <NavLink to='/profile' className={classes.headerLink}>Профиль</NavLink>
+                </li>
             </ul>
         </Grid>
     );

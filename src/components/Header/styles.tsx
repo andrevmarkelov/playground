@@ -8,4 +8,12 @@ export const useStyles = makeStyles({
         color: 'white',
         fontFamily: 'Montserrat',
     },
+    headerList: {
+        display: 'inline-block',
+        margin: '5px',
+    },
+    headerLink: {
+        textDecoration: 'none',
+        color: 'white',
+    },
 });

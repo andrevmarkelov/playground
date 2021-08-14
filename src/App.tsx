@@ -9,6 +9,7 @@ import {
 import {
     Dashboard,
     Profile,
+    Order,
 } from './features';
 
 function App () {
@@ -17,6 +18,7 @@ function App () {
             <Switch>
                 <Route path="/dashboard" component={Dashboard}/>
                 <Route path="/profile" component={Profile}/>
+                <Route path="/order" component={Order}/>
                 <Redirect to="/dashboard"/>
             </Switch>
         </Router>
