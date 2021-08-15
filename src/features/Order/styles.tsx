@@ -10,7 +10,7 @@ export const useStyles = makeStyles({
     orderHeader: {
         borderBottom: '1px solid #c1c1c1',
         padding: '15px 0px',
-        h3: {
+        '& h3': {
             fontWeight: '500',
         },
     },

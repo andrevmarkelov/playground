@@ -13,6 +13,9 @@ export const useStyles = makeStyles({
         alignItems: 'center',
         width: '100%',
         marginBottom: '50px',
+        '& h1': {
+            fontWeight: '500',
+        },
     },
     tableBody: {
         width: '100%',
