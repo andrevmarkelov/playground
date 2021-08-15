@@ -5,6 +5,7 @@ import {
     Switch,
     Redirect,
 } from 'react-router-dom';
+import {Header} from './components/Header';
 
 import {
     Dashboard,
@@ -14,14 +15,17 @@ import {
 
 function App () {
     return (
-        <Router>
-            <Switch>
-                <Route path="/dashboard" component={Dashboard}/>
-                <Route path="/profile" component={Profile}/>
-                <Route path="/order" component={Order}/>
-                <Redirect to="/dashboard"/>
-            </Switch>
-        </Router>
+        <>
+            <Router>
+                <Header/>
+                <Switch>
+                    <Route path="/dashboard" component={Dashboard}/>
+                    <Route path="/profile" component={Profile}/>
+                    <Route path="/order" component={Order}/>
+                    <Redirect to="/dashboard"/>
+                </Switch>
+            </Router>
+        </>
     );
 }
 

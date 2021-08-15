@@ -6,7 +6,6 @@ import {
     useAppSelector,
 } from '../../app/hooks';
 import {Table} from '../../components/Table';
-import {Header} from '../../components/Header';
 
 export const Dashboard: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -20,7 +19,6 @@ export const Dashboard: React.FC = () => {
 
     return (
         <div>
-            <Header/>
             <Table/>
             <h1>Dashboard <button onClick={increase}>Increase</button></h1>
             <ul>

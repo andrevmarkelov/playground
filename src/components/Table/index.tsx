@@ -3,33 +3,33 @@ import React from 'react';
 import {TableItem} from '../TableItem';
 import {useStyles} from './styles';
 
+type ordersItemsType = {
+    id: number;
+    link: string;
+    price: string;
+    description: string;
+    date: string;
+}
+
+const ordersItems: ordersItemsType[] = [
+    {
+        id: 0,
+        link: 'Разработка приложения для логиста и курьеров',
+        price: '150$',
+        description: 'Необходимо создать приложение для курьеров и логиста, более подробно во вложении.',
+        date: new Date().toLocaleDateString(),
+    },
+    {
+        id: 1,
+        link: 'Создание серверной расчетной программы',
+        price: '220$',
+        description: 'В рамках реализации нового проекта компании Danfoss, стоит задача реализации сервера для проведения ряда расчетов для подбора оборудования.',
+        date: new Date().toLocaleDateString(),
+    },
+];
+
 export const Table: React.FC = () => {
     const classes = useStyles();
-
-    type ordersItemsType = {
-        id: number;
-        link: string;
-        price: string;
-        description: string;
-        date: string;
-    }
-
-    const ordersItems: ordersItemsType[] = [
-        {
-            id: 0,
-            link: 'Разработка приложения для логиста и курьеров',
-            price: '150$',
-            description: 'Необходимо создать приложение для курьеров и логиста, более подробно во вложении.',
-            date: new Date().toLocaleDateString(),
-        },
-        {
-            id: 1,
-            link: 'Создание серверной расчетной программы',
-            price: '220$',
-            description: 'В рамках реализации нового проекта компании Danfoss, стоит задача реализации сервера для проведения ряда расчетов для подбора оборудования.',
-            date: new Date().toLocaleDateString(),
-        },
-    ];
 
     return (
         <div className={classes.wrapper}>
