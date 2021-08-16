@@ -3,4 +3,5 @@ export interface Props {
     price: string;
     description: string;
     date: string;
+    id: number;
 }

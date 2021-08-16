@@ -21,7 +21,7 @@ function App () {
                 <Switch>
                     <Route path="/dashboard" component={Dashboard}/>
                     <Route path="/profile" component={Profile}/>
-                    <Route path="/order" component={Order}/>
+                    <Route path="/order/:orderId" component={Order}/>
                     <Redirect to="/dashboard"/>
                 </Switch>
             </Router>

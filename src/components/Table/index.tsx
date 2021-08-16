@@ -41,6 +41,7 @@ export const Table: React.FC = () => {
                 {ordersItems.map((item) => (
                     <TableItem
                         key={item.id}
+                        id={item.id}
                         link={item.link}
                         price={item.price}
                         description={item.description}

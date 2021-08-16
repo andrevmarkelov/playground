@@ -1,9 +1,11 @@
 import {Grid} from '@material-ui/core';
 import React from 'react';
 import {useStyles} from './styles';
+import {useParams} from 'react-router-dom';
 
 export const Order: React.FC = () => {
     const classes = useStyles();
+    const params = useParams<{orderId?: string}>();
 
     return (
         <div>
@@ -14,7 +16,7 @@ export const Order: React.FC = () => {
                     alignItems="center"
                     className={classes.orderHeader}
                 >
-                    <h3>Разработка приложения для логиста и курьеров</h3>
+                    <h3>Разработка приложения для логиста и курьеров {params.orderId}</h3>
                     <span>Бюджет: 150$</span>
                 </Grid>
                 <div className={classes.orderDescription}>
