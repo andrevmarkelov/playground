@@ -20,4 +20,10 @@ export const useStyles = makeStyles({
     tableBody: {
         width: '100%',
     },
+    buttonPlaceOrder: {
+        backgroundColor: '#00cd5e',
+        '&:hover': {
+            backgroundColor: '#00bd57',
+        },
+    },
 });

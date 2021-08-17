@@ -35,7 +35,7 @@ export const Table: React.FC = () => {
         <div className={classes.wrapper}>
             <div className={classes.tableHeader}>
                 <h1>Вся работа</h1>
-                <Button variant="contained" color="secondary">Разместить заказ</Button>
+                <Button variant="contained" color="secondary" classes={{root: classes.buttonPlaceOrder}}>Разместить заказ</Button>
             </div>
             <div className={classes.tableBody}>
                 {ordersItems.map((item) => (
