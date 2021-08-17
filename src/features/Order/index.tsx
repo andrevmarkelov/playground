@@ -16,7 +16,7 @@ export const Order: React.FC = () => {
                     alignItems="center"
                     className={classes.orderHeader}
                 >
-                    <h3>Разработка приложения для логиста и курьеров {params.orderId}</h3>
+                    <h3>Разработка приложения для логиста и курьеров</h3>
                     <span>Бюджет: 150$</span>
                 </Grid>
                 <div className={classes.orderDescription}>
@@ -24,11 +24,12 @@ export const Order: React.FC = () => {
                 </div>
                 <Grid
                     container
-                    justifyContent="flex-start"
+                    justifyContent="space-between"
                     alignItems="center"
-                    className={classes.orderPublication}
+                    className={classes.orderFooter}
                 >
-                    Опубликовано: {new Date().toLocaleDateString()}
+                    <span>Опубликовано: {new Date().toLocaleDateString()}</span>
+                    <p>Номер заказа #{params.orderId}</p>
                 </Grid>
             </div>
         </div>

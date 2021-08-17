@@ -17,8 +17,14 @@ export const useStyles = makeStyles({
     orderDescription: {
         padding: '30px 10px',
     },
-    orderPublication: {
-        fontSize: '11px',
-        fontWeight: 'bold',
+    orderFooter: {
+        '& span': {
+            fontSize: '10px',
+            fontWeight: '500',
+        },
+        '& p': {
+            color: '#a2a2a2',
+            fontSize: '14px',
+        },
     },
 });
