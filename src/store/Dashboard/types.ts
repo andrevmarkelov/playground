@@ -1,12 +1,12 @@
-export interface State {
-    items: string[];
-    loading: LoadingState;
-    error?: string;
+export interface Order {
+    id: string;
+    title: string;
+    price: number;
+    created: string;
+    about: string;
+    views: number;
 }
 
-export enum LoadingState {
-    IDLE,
-    REQUEST,
-    SUCCESS,
-    FAILURE,
+export interface State {
+    items: Order[];
 }

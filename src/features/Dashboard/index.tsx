@@ -1,6 +1,6 @@
-import React, {useRef} from 'react';
+import React, {useEffect} from 'react';
 
-import {getData} from '../../store/Dashboard';
+import {actions} from '../../store/Dashboard';
 import {
     useAppDispatch,
     useAppSelector,
@@ -9,23 +9,17 @@ import {Table} from '../../components/Table';
 
 export const Dashboard: React.FC = () => {
     const dispatch = useAppDispatch();
-    const count = useRef(0);
     const items = useAppSelector(({dashboard}) => dashboard.items);
 
-    const increase = () => {
-        count.current++;
-        dispatch(getData(count.current));
-    };
+    useEffect(() => {
+        dispatch(actions.getItems());
+    }, [dispatch]);
 
     return (
         <div>
-            <Table/>
-            <h1>Dashboard <button onClick={increase}>Increase</button></h1>
-            <ul>
-                {items.map((name) => (
-                    <li key={name}>{name}</li>
-                ))}
-            </ul>
+            <Table
+                items={items}
+            />
         </div>
     );
 };
