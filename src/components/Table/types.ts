@@ -1,6 +1,5 @@
+import {Order} from '../../store/Dashboard/types';
+
 export interface Props {
-    link: string;
-    price: string;
-    description: string;
-    date: string;
+    items: Order[];
 }

@@ -1,34 +1,11 @@
 import {Button} from '@material-ui/core';
 import React from 'react';
+
 import {TableItem} from '../TableItem';
 import {useStyles} from './styles';
+import {Props} from './types';
 
-type ordersItemsType = {
-    id: number;
-    link: string;
-    price: string;
-    description: string;
-    date: string;
-}
-
-const ordersItems: ordersItemsType[] = [
-    {
-        id: 0,
-        link: 'Разработка приложения для логиста и курьеров',
-        price: '150$',
-        description: 'Необходимо создать приложение для курьеров и логиста, более подробно во вложении.',
-        date: new Date().toLocaleDateString(),
-    },
-    {
-        id: 1,
-        link: 'Создание серверной расчетной программы',
-        price: '220$',
-        description: 'В рамках реализации нового проекта компании Danfoss, стоит задача реализации сервера для проведения ряда расчетов для подбора оборудования.',
-        date: new Date().toLocaleDateString(),
-    },
-];
-
-export const Table: React.FC = () => {
+export const Table: React.FC<Props> = ({items}) => {
     const classes = useStyles();
 
     return (
@@ -38,14 +15,10 @@ export const Table: React.FC = () => {
                 <Button variant="contained" color="secondary" classes={{root: classes.buttonPlaceOrder}}>Разместить заказ</Button>
             </div>
             <div className={classes.tableBody}>
-                {ordersItems.map((item) => (
+                {items.map((item) => (
                     <TableItem
                         key={item.id}
-                        id={item.id}
-                        link={item.link}
-                        price={item.price}
-                        description={item.description}
-                        date={item.date}
+                        {...item}
                     />
                 ))}
             </div>
