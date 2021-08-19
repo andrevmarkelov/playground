@@ -20,7 +20,7 @@ function App () {
                 <Header/>
                 <Switch>
                     <Route path="/dashboard" component={Dashboard}/>
-                    <Route path="/profile" component={Profile}/>
+                    <Route path="/profile/:username" component={Profile}/>
                     <Route path="/order/:orderId" component={Order}/>
                     <Redirect to="/dashboard"/>
                 </Switch>
