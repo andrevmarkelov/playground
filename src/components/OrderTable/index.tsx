@@ -5,7 +5,7 @@ import {TableItem} from '../TableItem';
 import {useStyles} from './styles';
 import {Props} from './types';
 
-export const Table: React.FC<Props> = ({items}) => {
+export const OrderTable: React.FC<Props> = ({items}) => {
     const classes = useStyles();
 
     return (

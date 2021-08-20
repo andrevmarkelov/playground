@@ -5,7 +5,7 @@ import {
     useAppDispatch,
     useAppSelector,
 } from '../../app/hooks';
-import {Table} from '../../components/Table';
+import {OrderTable} from '../../components/OrderTable';
 
 export const Dashboard: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -17,7 +17,7 @@ export const Dashboard: React.FC = () => {
 
     return (
         <div>
-            <Table
+            <OrderTable
                 items={items}
             />
         </div>

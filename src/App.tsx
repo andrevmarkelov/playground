@@ -11,6 +11,7 @@ import {
     Dashboard,
     Profile,
     Order,
+    Freelancers,
 } from './features';
 
 function App () {
@@ -22,6 +23,7 @@ function App () {
                     <Route path="/dashboard" component={Dashboard}/>
                     <Route path="/profile/:username" component={Profile}/>
                     <Route path="/order/:orderId" component={Order}/>
+                    <Route path="/freelancers" component={Freelancers}/>
                     <Redirect to="/dashboard"/>
                 </Switch>
             </Router>

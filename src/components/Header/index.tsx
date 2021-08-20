@@ -15,6 +15,9 @@ export const Header: React.FC = () => {
                 <li className={classes.headerList}>
                     <NavLink to='/profile' className={classes.headerLink}>Профиль</NavLink>
                 </li>
+                <li className={classes.headerList}>
+                    <NavLink to='/freelancers' className={classes.headerLink}>Фрилансеры</NavLink>
+                </li>
             </ul>
         </Grid>
     );
