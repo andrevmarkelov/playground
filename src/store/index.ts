@@ -4,10 +4,12 @@ import {
     Action,
 } from '@reduxjs/toolkit';
 import dashboard from './Dashboard';
+import freelancers from './Freelancers';
 
 export const store = configureStore({
     reducer: {
         dashboard,
+        freelancers,
     },
 });
 
