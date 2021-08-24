@@ -3,7 +3,7 @@ export interface Order {
     title: string;
     price: number;
     created: string;
-    about: string;
+    details: string;
     views: number;
 }
 

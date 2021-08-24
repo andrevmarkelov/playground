@@ -3,12 +3,12 @@ import {
     ThunkAction,
     Action,
 } from '@reduxjs/toolkit';
-import dashboard from './Dashboard';
+import orders from './Orders';
 import freelancers from './Freelancers';
 
 export const store = configureStore({
     reducer: {
-        dashboard,
+        orders,
         freelancers,
     },
 });

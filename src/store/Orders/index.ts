@@ -5,7 +5,7 @@ import __DATA__ from './__data__';
 import initialState from './handlers';
 
 export const {actions, reducer} = createSlice({
-    name: 'dashboard',
+    name: 'orders',
     initialState,
     reducers: {
         getItems: (state) => {

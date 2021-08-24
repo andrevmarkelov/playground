@@ -1,16 +1,15 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Route,
     Switch,
     Redirect,
 } from 'react-router-dom';
-import {Header} from './components/Header';
+import {Header} from './components';
 
 import {
-    Dashboard,
     Profile,
-    Order,
+    Orders,
     Freelancers,
 } from './features';
 
@@ -20,11 +19,10 @@ function App () {
             <Router>
                 <Header/>
                 <Switch>
-                    <Route path="/dashboard" component={Dashboard}/>
+                    <Route path="/orders" component={Orders}/>
                     <Route path="/profile/:username" component={Profile}/>
-                    <Route path="/order/:orderId" component={Order}/>
                     <Route path="/freelancers" component={Freelancers}/>
-                    <Redirect to="/dashboard"/>
+                    <Redirect to="/orders"/>
                 </Switch>
             </Router>
         </>

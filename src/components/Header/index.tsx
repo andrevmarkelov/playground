@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
         <Grid container justifyContent="center" alignItems="center" className={classes.header}>
             <ul>
                 <li className={classes.headerList}>
-                    <NavLink to='/dashboard' className={classes.headerLink}>Список заказов</NavLink>
+                    <NavLink to='/orders' className={classes.headerLink}>Список заказов</NavLink>
                 </li>
                 <li className={classes.headerList}>
                     <NavLink to='/profile' className={classes.headerLink}>Профиль</NavLink>
